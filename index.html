@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halloween</title>
+    <style>
+      body {
+        background-image: linear-gradient(
+          rgb(53, 27, 68),
+          #090011,
+          rgb(53, 27, 68)
+        );
+      }
+      h1 {
+        text-align: center;
+        font-size: 45px;
+        color: #fdae94;
+        font-family: garamond;
+        margin: 5px;
+      }
+      h2 {
+        color: #fdae94;
+        font-family: garamond;
+        text-align: center;
+        margin: 8px;
+        font-weight: lighter;
+        font-size: 30px;
+      }
+
+      p {
+        color: #f8d8cd;
+        width: 400px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-family: garamond;
+        line-height: 25px;
+      }
+      .oxytocin {
+        color: #ff8257;
+      }
+      br {
+        size: 10px;
+      }
+      .ghosts {
+        font-size: 30px;
+        margin-top: 1px;
+        margin-bottom: 15px;
+      }
+      img {
+        width: 400px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 30px;
+        border: 5px double #f8d8cd;
+        margin-bottom: 10px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background: black;
+        border-radius: 40px;
+        color: #f8d8cd;
+        padding: 10px;
+        font-family: garamond;
+        font-size: 30px;
+        border-color: #f8d8cd;
+        box-shadow: 5px 10px 5px black;
+      }
+      button:hover {
+        cursor: pointer;
+        color: rgb(53, 27, 68);
+        transition: 200ms;
+        background-color: #ff8257;
+      }
+      a {
+        display: block;
+        margin: 0 auto;
+        color: #f8d8cd;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+      }
+
+      div {
+        font-family: garamond;
+        color: #f8d8cd;
+        text-align: center;
+
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎃<br />HALLOWEEN</h1>
+    <h2>
+      <em>...and why it is the <strong>best</strong> holiday!</em>
+    </h2>
+    <hr />
+    <p>
+      Halloween provides us with opportunities to safely explore our fears
+      through social bonding.
+      <span class="oxytocin"
+        >When we are scared, our bodies release a hormone known as oxytocin that
+        has been found to intensify memories and facilitate social
+        bonding.</span
+      >
+      Thus when people share a spooky or spine-chilling experience, they may
+      feel closer to each other. Halloween also allows us to safely explore our
+      fears for one night of the year. We get to put on a mask and inhabit a
+      character, let go of our inhibitions and celebrate what scares us. The act
+      of dressing up as what we are afraid of allows us to grapple with our
+      fears, to bring them closer and embrace them.
+    </p>
+    <div class="ghosts">👻👻👻👻👻👻👻👻</div>
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/976/original/Screenshot_2023-10-25_151820.png?1698272339"
+      alt="old costumes"
+    />
+    <button>
+      <strong>Click Me</strong>
+    </button>
+    <a
+      href="https://www.cnn.com/style/article/history-of-halloween-costumes/index.html"
+      target="_blank"
+      >more on the history of Halloween costumes here</a
+    >
+    <div>This page was built by Lindsay Land</div>
+    <script>
+      function clickMe() {
+        let trickTreat = prompt("Trick or Treat?");
+        let div = document.querySelector("div");
+        trickTreat = trickTreat.toLowerCase();
+        if (trickTreat === "treat") {
+          div.innerHTML = "🍬🍭🍫🍬🍭🍫🍬🍭🍫";
+        } else {
+          if (trickTreat === "trick") {
+            div.innerHTML = "👹👹👹👹👹👹👹👹👹👹";
+          } else {
+            alert("Trick OR Treat???");
+          }
+        }
+      }
+      let clickMeButton = document.querySelector("button");
+      clickMeButton.addEventListener("click", clickMe);
+    </script>
+  </body>
+</html>
